@@ -4,3 +4,8 @@ coverage
 *.xlsx#
 /test/fund*.xlsx
 yarn-error.log
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/packages.iml
+/.idea/vcs.xml
