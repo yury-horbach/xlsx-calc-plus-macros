@@ -54,12 +54,18 @@ let formulas = {
     'CEILING': ceiling,
     'FILTER': throwErrors(FILTER),
     '_xlws.FILTER': throwErrors(FILTER),
-    'VSTACK': vstack
+    'VSTACK': vstack,
+    'XLOOKUP': xlookup
 };
 
 function vstack(...params) {
     let result = [];
     params.forEach(param => param.forEach(row => result.push(row)));
+    return result;
+}
+
+function xlookup(lookup_value, lookup_array, returt_array){
+    const result = index(returt_array, match(lookup_value, lookup_array, 0));
     return result;
 }
 
