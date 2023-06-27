@@ -53,7 +53,15 @@ let formulas = {
     'SUBSTITUTE': substitute,
     'CEILING': ceiling,
     'FILTER': throwErrors(FILTER),
+    '_xlws.FILTER': throwErrors(FILTER),
+    'VSTACK': vstack
 };
+
+function vstack(...params) {
+    let result = [];
+    params.forEach(param => param.forEach(row => result.push(row)));
+    return result;
+}
 
 function choose(option) {
     return arguments[option];
